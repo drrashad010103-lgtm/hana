@@ -1,6 +1,6 @@
 # RS_Own (النسخة الحرة)
 
-PHP 8.2 + MySQL (`rs_own`) app under `app/`. No composer/git; tests run via `tests/run_all.ps1` and `tools/phpunit.phar`.
+PHP 8.2 + MySQL (`rs_own`) app under `app/`. No composer; git repo (secrets, sessions, dumps, deploy and backups are untracked via .gitignore); tests run via `tests/run_all.ps1` and `tools/phpunit.phar`.
 
 ## Run
 
@@ -47,7 +47,7 @@ PHP 8.2 + MySQL (`rs_own`) app under `app/`. No composer/git; tests run via `tes
 - Imported remote invoices stay `branch=1` and are read-only in `sale_rs.php` / `buy_rs.php` (view + print only). Invoice search/load includes branches `1` and `99`; never let a local save/delete target branch 1, and never re-export branch 1 as if it were local.
 - `bridge_run_import()` calls `sync_rs_to_own.php --invoices-only --sql-auth`; `--sql-auth` makes the CLI use the `rs_bridge` SQL login so it works under the web server instead of relying on Windows auth.
 - `RS_RS` is the master. Local branch 99 invoice numbers are reserved at `10000000+` to avoid colliding with remote numbering.
-- First remote-write backup: `D:\RS_Own\backups\RS_RS_20261021_182533.bak`. Dedicated login is `rs_bridge` (INSERT/UPDATE, SELECT, `Inv_Sub` DELETE only).
+- First remote-write backup: `D:\RS_Own\private\backups\RS_RS_20261021_182533.bak`. Dedicated login is `rs_bridge` (INSERT/UPDATE, SELECT, `Inv_Sub` DELETE only).
 
 ## Verification
 
