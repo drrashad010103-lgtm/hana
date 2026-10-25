@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="tools/phpunit.xsd"
+         bootstrap="tests/bootstrap.php"
+         colors="true"
+         failOnWarning="true"
+         beStrictAboutOutputDuringTests="true">
+  <testsuites>
+    <testsuite name="unit">
+      <file>tests/ValidatorsTest.php</file>
+      <file>tests/CfgTest.php</file>
+      <file>tests/AuthTest.php</file>
+    </testsuite>
+    <testsuite name="db">
+      <file>tests/DbTest.php</file>
+    </testsuite>
+  </testsuites>
+</phpunit>

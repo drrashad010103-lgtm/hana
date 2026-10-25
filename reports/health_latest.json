@@ -1,0 +1,540 @@
+{
+    "generated_at": "2026-10-23T19:26:11+03:00",
+    "root": "D:\\RS_Own",
+    "php": "8.2.34",
+    "db": "rs_own",
+    "overall": "FAIL",
+    "summary": {
+        "OK": 29,
+        "INFO": 4,
+        "WARN": 15,
+        "FAIL": 1,
+        "CRIT": 0
+    },
+    "checks": [
+        {
+            "id": "env.php",
+            "area": "env",
+            "title": "إصدار PHP",
+            "status": "OK",
+            "message": "PHP 8.2.34",
+            "details": []
+        },
+        {
+            "id": "env.ext",
+            "area": "env",
+            "title": "الإضافات المطلوبة",
+            "status": "WARN",
+            "message": "اختيارية ناقصة: zip, fileinfo",
+            "details": []
+        },
+        {
+            "id": "env.paths",
+            "area": "env",
+            "title": "المسارات الأساسية",
+            "status": "OK",
+            "message": "كل المسارات موجودة",
+            "details": [
+                "OK app → D:/RS_Own/app",
+                "OK config.php → D:/RS_Own/app/config.php",
+                "OK lib → D:/RS_Own/app/lib",
+                "OK pages → D:/RS_Own/app/pages",
+                "OK reports → D:/RS_Own/reports",
+                "OK backups → D:/RS_Own/backups"
+            ]
+        },
+        {
+            "id": "env.ini",
+            "area": "env",
+            "title": "إعدادات PHP",
+            "status": "WARN",
+            "message": "display_errors مفعّل (يفضل إيقافه على الإنتاج)",
+            "details": [
+                "display_errors=1",
+                "memory_limit=128M",
+                "timezone=Africa/Cairo"
+            ]
+        },
+        {
+            "id": "env.server",
+            "area": "env",
+            "title": "سيرفر التطبيق :8082",
+            "status": "OK",
+            "message": "السيرفر شغال على 127.0.0.1:8082",
+            "details": []
+        },
+        {
+            "id": "config.load",
+            "area": "config",
+            "title": "تحميل config.php",
+            "status": "OK",
+            "message": "config.php محمّل",
+            "details": [
+                "admin_user=admin"
+            ]
+        },
+        {
+            "id": "config.db",
+            "area": "config",
+            "title": "إعدادات القاعدة",
+            "status": "OK",
+            "message": "إعدادات القاعدة مكتملة",
+            "details": [
+                "name=rs_own",
+                "host=127.0.0.1",
+                "charset=utf8mb4"
+            ]
+        },
+        {
+            "id": "config.secrets",
+            "area": "config",
+            "title": "الأسرار و EasyOrders",
+            "status": "WARN",
+            "message": "secrets.php غير موجود — مزامنة EasyOrders قد لا تعمل",
+            "details": [
+                "secrets.php: غير موجود",
+                "easyorders.key: مضبوط"
+            ]
+        },
+        {
+            "id": "config.setup",
+            "area": "config",
+            "title": "setup.php",
+            "status": "OK",
+            "message": "setup.php محذوف",
+            "details": []
+        },
+        {
+            "id": "config.htaccess",
+            "area": "config",
+            "title": "حماية .htaccess",
+            "status": "WARN",
+            "message": "حماية ناقصة: حجب config.php",
+            "details": [
+                "MISSING حجب config.php",
+                "OK حجب lib",
+                "OK حجب sql"
+            ]
+        },
+        {
+            "id": "config.secrets_location",
+            "area": "config",
+            "title": "موقع secrets.php",
+            "status": "INFO",
+            "message": "secrets.php غير موجود",
+            "details": []
+        },
+        {
+            "id": "db.connect",
+            "area": "db",
+            "title": "الاتصال بقاعدة البيانات",
+            "status": "OK",
+            "message": "متصل بـ rs_own",
+            "details": [
+                "server=13.0.2-MariaDB"
+            ]
+        },
+        {
+            "id": "db.tables",
+            "area": "db",
+            "title": "جداول القاعدة مقابل schema_manifest",
+            "status": "WARN",
+            "message": "جداول إضافية غير موجودة في المانيفست: _orphan_sub_backup, bridge_log, bridge_map, bridge_state, countries_bak_20261022, curr_barcodes_bak_20261022, curr_barcodes_old_20261022, customers_bak_20261022, days_bak_20261022, departments_bak_20261022",
+            "details": [
+                "live=80",
+                "manifest=63"
+            ]
+        },
+        {
+            "id": "db.columns",
+            "area": "db",
+            "title": "أعمدة الجداول مقابل schema_manifest",
+            "status": "OK",
+            "message": "كل الأعمدة موجودة",
+            "details": []
+        },
+        {
+            "id": "db.indexes",
+            "area": "db",
+            "title": "الفهارس المهمة",
+            "status": "WARN",
+            "message": "فهارس ناقصة: inv.proc_id, inv.branch, inv_sub.proc_id",
+            "details": []
+        },
+        {
+            "id": "db.counts",
+            "area": "db",
+            "title": "إحصاءات القاعدة",
+            "status": "INFO",
+            "message": "إحصاءات الجداول",
+            "details": [
+                "inv=18685",
+                "inv_sub=48646",
+                "currencies=3245",
+                "item_bal=3245",
+                "users=3",
+                "audit_log=48"
+            ]
+        },
+        {
+            "id": "data.dup_proc",
+            "area": "data",
+            "title": "تكرار proc_id في الفواتير",
+            "status": "OK",
+            "message": "لا يوجد تكرار",
+            "details": []
+        },
+        {
+            "id": "data.orphan_heads",
+            "area": "data",
+            "title": "فواتير سارية بدون بنود",
+            "status": "WARN",
+            "message": "فواتير بدون بنود: 1",
+            "details": [
+                "all=1",
+                "branch99=0"
+            ]
+        },
+        {
+            "id": "data.orphan_lines",
+            "area": "data",
+            "title": "بنود يتيمة (بدون رأس)",
+            "status": "OK",
+            "message": "لا توجد بنود يتيمة",
+            "details": []
+        },
+        {
+            "id": "data.negative_bal",
+            "area": "data",
+            "title": "الأرصدة السالبة",
+            "status": "WARN",
+            "message": "أرصدة سالبة: 118 (مجموع -227.322) — موروثة من بيانات المهندس غالباً",
+            "details": []
+        },
+        {
+            "id": "data.item_bal",
+            "area": "data",
+            "title": "تغطية item_bal للأصناف",
+            "status": "OK",
+            "message": "تغطية item_bal كاملة",
+            "details": [
+                "missing=0",
+                "orphan=0"
+            ]
+        },
+        {
+            "id": "data.branch99",
+            "area": "data",
+            "title": "ترقيم فرع 99",
+            "status": "OK",
+            "message": "ترقيم فرع 99 متسق",
+            "details": [
+                "max_proc=10000003",
+                "max_id=10000003",
+                "active=1",
+                "seq_proc=10000003",
+                "seq_inv=10000003"
+            ]
+        },
+        {
+            "id": "data.audit",
+            "area": "data",
+            "title": "سجل التدقيق",
+            "status": "OK",
+            "message": "سجل التدقيق شغال",
+            "details": [
+                "rows=48",
+                "last=2026-10-21 22:25:39"
+            ]
+        },
+        {
+            "id": "data.flags",
+            "area": "data",
+            "title": "أعلام الفواتير للمستخدمين",
+            "status": "INFO",
+            "message": "مستخدمون بلا صلاحية تعديل فاتورة (Fail-Closed): 1",
+            "details": []
+        },
+        {
+            "id": "data.pay_methods",
+            "area": "data",
+            "title": "طرق الدفع",
+            "status": "OK",
+            "message": "طرق دفع مفعّلة: 4",
+            "details": []
+        },
+        {
+            "id": "data.inv_types",
+            "area": "data",
+            "title": "قيم أنواع الفواتير",
+            "status": "OK",
+            "message": "أنواع الفواتير سليمة",
+            "details": []
+        },
+        {
+            "id": "sec.users_empty_pwd",
+            "area": "security",
+            "title": "مستخدمون بكلمة مرور فارغة",
+            "status": "OK",
+            "message": "لا توجد كلمات مرور فارغة",
+            "details": []
+        },
+        {
+            "id": "sec.users_plaintext",
+            "area": "security",
+            "title": "كلمات مرور غير مشفرة",
+            "status": "OK",
+            "message": "كل كلمات المرور مشفرة",
+            "details": []
+        },
+        {
+            "id": "sec.users_noperms",
+            "area": "security",
+            "title": "مستخدمون بلا صلاحيات",
+            "status": "OK",
+            "message": "كل المستخدمين لديهم صلاحيات",
+            "details": []
+        },
+        {
+            "id": "sec.admin",
+            "area": "security",
+            "title": "حساب admin",
+            "status": "OK",
+            "message": "حساب admin موجود",
+            "details": []
+        },
+        {
+            "id": "sec.perm_map",
+            "area": "security",
+            "title": "خريطة الصلاحيات",
+            "status": "FAIL",
+            "message": "صفحات في الخريطة غير موجودة: refresh_bal.php",
+            "details": []
+        },
+        {
+            "id": "sec.pages_unmapped",
+            "area": "security",
+            "title": "صفحات بلا صلاحية محددة",
+            "status": "WARN",
+            "message": "صفحات بدون m_*: about.php, api_gard.php, data_basic.php, main.php",
+            "details": []
+        },
+        {
+            "id": "sec.session",
+            "area": "security",
+            "title": "إعدادات الجلسة",
+            "status": "OK",
+            "message": "إعدادات الجلسة آمنة",
+            "details": []
+        },
+        {
+            "id": "sec.csrf",
+            "area": "security",
+            "title": "حماية CSRF",
+            "status": "WARN",
+            "message": "حماية CSRF ناقصة",
+            "details": [
+                "OK csrf_require()",
+                "MISSING X-CSRF-Token",
+                "OK csrf_field()"
+            ]
+        },
+        {
+            "id": "sec.dangerous_calls",
+            "area": "security",
+            "title": "دوال خطرة في app",
+            "status": "WARN",
+            "message": "دوال تحتاج مراجعة (48)",
+            "details": [
+                "exec @ D:/RS_Own/app/lib/archive_year.php:27",
+                "exec @ D:/RS_Own/app/lib/archive_year.php:30",
+                "exec @ D:/RS_Own/app/lib/archive_year.php:36",
+                "exec @ D:/RS_Own/app/lib/archive_year.php:63",
+                "exec @ D:/RS_Own/app/lib/audit.php:11",
+                "exec @ D:/RS_Own/app/lib/bridge.php:10",
+                "exec @ D:/RS_Own/app/lib/bridge.php:23",
+                "exec @ D:/RS_Own/app/lib/bridge.php:27",
+                "exec @ D:/RS_Own/app/lib/bridge.php:65",
+                "proc_open @ D:/RS_Own/app/lib/bridge.php:528",
+                "exec @ D:/RS_Own/app/lib/cfg.php:20",
+                "exec @ D:/RS_Own/app/lib/cfg.php:110",
+                "exec @ D:/RS_Own/app/lib/cfg.php:151",
+                "exec @ D:/RS_Own/app/lib/cfg.php:152",
+                "exec @ D:/RS_Own/app/lib/eo_item.php:14",
+                "exec @ D:/RS_Own/app/lib/guard.php:132",
+                "exec @ D:/RS_Own/app/lib/items.php:129",
+                "exec @ D:/RS_Own/app/lib/loyalty.php:59",
+                "exec @ D:/RS_Own/app/lib/push.php:127",
+                "exec @ D:/RS_Own/app/lib/push.php:169",
+                "exec @ D:/RS_Own/app/lib/push.php:170",
+                "exec @ D:/RS_Own/app/lib/seq.php:11",
+                "exec @ D:/RS_Own/app/pages/api_control.php:81",
+                "exec @ D:/RS_Own/app/pages/api_control.php:90",
+                "exec @ D:/RS_Own/app/pages/api_control.php:91",
+                "exec @ D:/RS_Own/app/pages/api_control.php:107",
+                "exec @ D:/RS_Own/app/pages/api_gard.php:11",
+                "exec @ D:/RS_Own/app/pages/board.php:214",
+                "exec @ D:/RS_Own/app/pages/board.php:215",
+                "exec @ D:/RS_Own/app/pages/branches.php:17"
+            ]
+        },
+        {
+            "id": "code.lint",
+            "area": "code",
+            "title": "فحص الصياغة (lint)",
+            "status": "OK",
+            "message": "كل الملفات سليمة (149 ملف)",
+            "details": []
+        },
+        {
+            "id": "code.guards",
+            "area": "code",
+            "title": "حماية إعادة التحميل في lib",
+            "status": "WARN",
+            "message": "ملفات تُحمّل بـ require بلا function_exists: wa.php",
+            "details": []
+        },
+        {
+            "id": "code.links",
+            "area": "code",
+            "title": "روابط القوائم والشاشات",
+            "status": "OK",
+            "message": "كل روابط القوائم سليمة",
+            "details": []
+        },
+        {
+            "id": "code.todos",
+            "area": "code",
+            "title": "ملاحظات TODO/FIXME",
+            "status": "OK",
+            "message": "لا توجد ملاحظات TODO/FIXME",
+            "details": []
+        },
+        {
+            "id": "code.devpaths",
+            "area": "code",
+            "title": "مسارات تطوير مثبتة",
+            "status": "WARN",
+            "message": "مسارات مطلقة في app: 52",
+            "details": [
+                "D:/RS_Own/app/config.php:5",
+                "D:/RS_Own/app/config.php:7",
+                "D:/RS_Own/app/config.php:9",
+                "D:/RS_Own/app/lib/bridge.php:39",
+                "D:/RS_Own/app/lib/bridge.php:44",
+                "D:/RS_Own/app/lib/bridge.php:501",
+                "D:/RS_Own/app/lib/easyorders.php:3",
+                "D:/RS_Own/app/lib/eo_item.php:5",
+                "D:/RS_Own/app/lib/eo_item.php:59",
+                "D:/RS_Own/app/lib/eo_item.php:62",
+                "D:/RS_Own/app/lib/layout.php:17",
+                "D:/RS_Own/app/lib/layout.php:21",
+                "D:/RS_Own/app/lib/paths.php:7",
+                "D:/RS_Own/app/lib/push.php:17",
+                "D:/RS_Own/app/lib/push_secret.php:2",
+                "D:/RS_Own/app/lib/wa.php:11",
+                "D:/RS_Own/app/lib/wa.php:14",
+                "D:/RS_Own/app/pages/api_buy_save.php:10",
+                "D:/RS_Own/app/pages/api_control.php:28",
+                "D:/RS_Own/app/pages/api_easy_sync.php:184"
+            ]
+        },
+        {
+            "id": "code.size",
+            "area": "code",
+            "title": "أكبر الملفات",
+            "status": "INFO",
+            "message": "أكبر 5 ملفات",
+            "details": [
+                "D:/RS_Own/app/lib/schema_manifest.php = 175.3 KB",
+                "D:/RS_Own/app/pages/sale_rs.php = 50.6 KB",
+                "D:/RS_Own/app/pages/buy_rs.php = 35.2 KB",
+                "D:/RS_Own/app/pages/control.php = 31.9 KB",
+                "D:/RS_Own/app/pages/board.php = 27.3 KB"
+            ]
+        },
+        {
+            "id": "ops.backup",
+            "area": "ops",
+            "title": "النسخ الاحتياطي",
+            "status": "OK",
+            "message": "نسخة حديثة",
+            "details": [
+                "rs_own_20261023_163410.sql (2.9 ساعة)"
+            ]
+        },
+        {
+            "id": "ops.sync",
+            "area": "ops",
+            "title": "آخر مزامنة",
+            "status": "OK",
+            "message": "المزامنة حديثة",
+            "details": [
+                "2026-10-22 22:53 (20.5 ساعة)"
+            ]
+        },
+        {
+            "id": "ops.watchdog",
+            "area": "ops",
+            "title": "مراقب الصحة",
+            "status": "WARN",
+            "message": "المراقب يقول bad",
+            "details": [
+                "overall=bad",
+                "ts=2026-10-23T19:17:08+03:00"
+            ]
+        },
+        {
+            "id": "ops.verify",
+            "area": "ops",
+            "title": "مطابقة المهندس",
+            "status": "WARN",
+            "message": "آخر مطابقة عمرها 2.9 يوم",
+            "details": [
+                "ok=1",
+                "ts=2026-10-20T21:40:45+03:00"
+            ]
+        },
+        {
+            "id": "ops.disk",
+            "area": "ops",
+            "title": "مساحة القرص",
+            "status": "OK",
+            "message": "المساحة كافية",
+            "details": [
+                "28.1% فاضي (48.1 GB)"
+            ]
+        },
+        {
+            "id": "ops.logs",
+            "area": "ops",
+            "title": "أخطاء حديثة في اللوج",
+            "status": "OK",
+            "message": "لا أخطاء حديثة في sync.log",
+            "details": []
+        },
+        {
+            "id": "tests.files",
+            "area": "tests",
+            "title": "ملفات الاختبارات",
+            "status": "OK",
+            "message": "اختبارات موجودة",
+            "details": [
+                "focused=6",
+                "phpunit=4"
+            ]
+        },
+        {
+            "id": "tests.tools",
+            "area": "tests",
+            "title": "أدوات الاختبار",
+            "status": "OK",
+            "message": "أدوات الاختبار موجودة",
+            "details": [
+                "OK phpunit.xml",
+                "OK phpunit.phar",
+                "OK run_all.ps1"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,8 @@
+Infinity site: https://rs2026.infinityfree.io
+Admin user: admin
+Admin password: 7LyPMtaQ27rg
+FTP host: ftpupload.net
+FTP user: if0_43096981
+FTP root (site): /rs2026.infinityfree.io/htdocs
+DB: if0_43096981_rs @ sql111.infinityfree.com
+Changed: 2026-10-21

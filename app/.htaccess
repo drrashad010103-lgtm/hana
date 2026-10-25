@@ -1,0 +1,22 @@
+AddDefaultCharset UTF-8
+<FilesMatch "^(config\.php|config\.sample\.php|\.htaccess)$">
+  Require all denied
+</FilesMatch>
+<Files "push_secret.php">
+  Require all denied
+</Files>
+<Files "schema_manifest.php">
+  Require all denied
+</Files>
+RedirectMatch 403 ^/(lib|sql|logs)/.*$
+RedirectMatch 403 ^/uploads/.*\.php$
+<FilesMatch "\.(log|sql|bak|old|orig|save|swp)$">
+  Require all denied
+</FilesMatch>
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType text/css "access plus 7 days"
+  ExpiresByType application/javascript "access plus 7 days"
+  ExpiresByType image/png "access plus 30 days"
+  ExpiresByType image/jpg "access plus 30 days"
+</IfModule>

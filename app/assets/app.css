@@ -1,0 +1,16 @@
+*{box-sizing:border-box}body{font-family:'Segoe UI',Tahoma,Arial;margin:0;background:#f1f5f9;display:flex;min-height:100vh}
+aside{width:210px;background:#0f766e;color:#fff;padding:14px 10px;position:sticky;top:0;height:100vh;order:2}main{order:1}
+.brand{font-size:18px;font-weight:800;padding:8px;margin-bottom:12px;border-bottom:1px solid #ffffff33}
+aside a{display:block;color:#fff;text-decoration:none;padding:10px 12px;border-radius:8px;margin-bottom:4px;font-size:15px}
+aside a:hover{background:#ffffff22}aside a.on{background:#fff;color:#0f766e;font-weight:800}
+main{flex:1;padding:18px;max-width:1100px}main h2{margin:0 0 14px}
+.card{background:#fff;border-radius:12px;padding:16px;box-shadow:0 1px 5px #0002;margin-bottom:14px}
+.row{display:flex;gap:10px;flex-wrap:wrap;align-items:end}
+label{font-size:13px;color:#475569}input,select{font-size:16px;padding:9px 12px;border:1px solid #cbd5e1;border-radius:8px;font-family:inherit}
+button{font-size:15px;padding:10px 18px;border:none;border-radius:8px;background:#0f766e;color:#fff;cursor:pointer;font-family:inherit;font-weight:700}
+button.warn{background:#f59e0b}button.danger{background:#dc2626}button.ghost{background:#e2e8f0;color:#0f172a}
+table{width:100%;border-collapse:collapse;background:#fff;font-size:14px}td,th{border:1px solid #e2e8f0;padding:7px 10px;text-align:right}
+th{background:#f8fafc}.tot{font-size:22px;font-weight:800;color:#0f766e}
+#cart tr td:last-child,#cart tr th:last-child{text-align:center}
+@media(max-width:700px){aside{width:60px}aside a{font-size:0}aside a::first-letter{font-size:20px}.brand{font-size:0}.brand::after{content:"🌿";font-size:20px}}
+@media(max-width:760px){body{flex-direction:column}aside{width:100%!important;height:auto;position:static;display:flex;overflow-x:auto;padding:6px;gap:4px}aside a{font-size:13px!important;white-space:nowrap;padding:8px 10px}aside a::first-letter{font-size:13px!important}.brand{font-size:15px!important}.brand::after{content:""!important}main{padding:10px!important;max-width:100%!important}.card{overflow-x:auto}table{min-width:560px}input,select{max-width:100%}.row>div{flex:1 1 140px}}

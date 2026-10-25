@@ -1,0 +1,54 @@
+{
+    "ts": "2026-10-25T22:37:08+03:00",
+    "overall": "bad",
+    "checks": {
+        "port_3306": {
+            "level": "ok",
+            "msg": "MariaDB :3306 شغال"
+        },
+        "port_8082": {
+            "level": "ok",
+            "msg": "Nginx :8082 شغال"
+        },
+        "port_3456": {
+            "level": "ok",
+            "msg": "EO proxy :3456 شغال"
+        },
+        "port_8081": {
+            "level": "ok",
+            "msg": "rs_online :8081 شغال"
+        },
+        "workers": {
+            "level": "bad",
+            "msg": "PHP workers: 0\/4"
+        },
+        "sync": {
+            "level": "ok",
+            "msg": "آخر مزامنة: 2026-10-25 19:16 (من 3.3 ساعة)"
+        },
+        "backup": {
+            "level": "ok",
+            "msg": "آخر باك أب: rs_own_20261025_220007.sql (0.6 ساعة)"
+        },
+        "restore_test": {
+            "level": "ok",
+            "msg": "آخر استرجاع ناجح: 2026-10-25 17:04"
+        },
+        "disk": {
+            "level": "ok",
+            "msg": "مساحة D: 27.5% (47.1GB فاضي)"
+        },
+        "verify_rs": {
+            "level": "warn",
+            "msg": "مطابقة المهندس: فيه فروق — 2026-10-25 17:12"
+        },
+        "push_infinity": {
+            "level": "bad",
+            "msg": "دفع إنفينيتي: 2026-10-22 09:42:11 done fail=0"
+        },
+        "sync_errors": {
+            "level": "ok",
+            "msg": "مفيش أخطاء حديثة"
+        }
+    }
+}

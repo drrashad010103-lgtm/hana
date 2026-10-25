@@ -1,0 +1,78 @@
+html[lang="ur"] body,
+html[lang="ur"] input,
+html[lang="ur"] select,
+html[lang="ur"] button,
+html[lang="ur"] textarea {
+  font-family: "Noto Nastaliq Urdu", "Jameel Noori Nastaleeq", Tahoma, sans-serif;
+}
+html[lang="hi"] body,
+html[lang="hi"] input,
+html[lang="hi"] select,
+html[lang="hi"] button,
+html[lang="hi"] textarea {
+  font-family: "Noto Sans Devanagari", "Mangal", Tahoma, sans-serif;
+}
+html[lang="bn"] body,
+html[lang="bn"] input,
+html[lang="bn"] select,
+html[lang="bn"] button,
+html[lang="bn"] textarea {
+  font-family: "Noto Sans Bengali", "Vrinda", Tahoma, sans-serif;
+}
+html[dir="ltr"] th,
+html[dir="ltr"] td {
+  text-align: left;
+}
+html[dir="ltr"] .card,
+html[dir="ltr"] main {
+  text-align: left;
+}
+html[dir="ltr"] .wrap > .side {
+  order: 0;
+}
+html[dir="ltr"] .wrap > .logo {
+  order: 1;
+}
+html[dir="ltr"] .side .it {
+  text-align: left;
+}
+html[dir="ltr"] .status {
+  text-align: left;
+}
+.rs-lang-pick {
+  position: fixed;
+  bottom: 12px;
+  left: 12px;
+  z-index: 9998;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 8px;
+  border: 1px solid #d8b4fe;
+  border-radius: 10px;
+  background: #ffffffed;
+  box-shadow: 0 4px 18px #4c1d9526;
+  font: 12px Tahoma, Arial, sans-serif;
+  color: #4c1d95;
+  direction: ltr;
+}
+html[dir="rtl"] .rs-lang-pick {
+  left: auto;
+  right: 12px;
+}
+.rs-lang-pick select {
+  border: 0;
+  background: transparent;
+  padding: 2px 4px;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  outline: none;
+}
+.rs-lang-pick .rs-globe {
+  font-size: 14px;
+  line-height: 1;
+}
+@media print {
+  .rs-lang-pick { display: none !important; }
+}
